@@ -1,0 +1,67 @@
+* {
+    font-family: 'Open Sans';
+    color: #141414;
+    font-weight: 300;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+img {
+    width: 450px;
+}
+
+.divider {
+    width: 55%;
+    border: 1px #141414 solid;
+}
+
+#titleText {
+    font-weight: 700;
+    font-size: 25px;
+    margin: 5px;
+}
+
+/* Link Wrapper styling */
+
+.linkWrapper {
+    width: 45%;
+    padding: 10px;
+    border: 2px #141414 solid;
+    border-radius: 10px;
+    margin: 50px;
+}
+
+.linkTitle {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px #141414 solid;
+    padding-bottom: 5px;
+}
+
+.linkdescription {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.linkBtn {
+    width: fit-content;
+    border: none;
+    background-color: #141414;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 6px;
+    cursor: pointer;
+}
