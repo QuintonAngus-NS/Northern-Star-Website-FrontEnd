@@ -1,0 +1,50 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(SignUp-Background_20260221_230014_0000.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    width: 30%;
+    border-radius: 35px 0 35px 0;
+    padding: 1%;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: white;
+}
+
+#userNameText {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #141414;
+    margin-bottom: 30px;
+}
+
+#verifyText {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#verificationCodeInput {
+    width: 85%;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #141414;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    border: 1px #141414 solid;
+}

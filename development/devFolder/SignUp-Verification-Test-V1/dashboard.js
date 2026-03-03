@@ -1,0 +1,36 @@
+const raw = document.cookie
+const token = raw.split("=")[1];
+const text = document.getElementsByClassName('text')[0]
+
+console.log(token)
+
+verify()
+
+async function verify() {
+
+    const cookieCheck = await fetch('https://ns-backend-215034531154.europe-west1.run.app/cookieVerify', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+        cookie: token
+    })
+})
+    
+    const verifyResponse = await cookieCheck.json()
+    console.log('verify response is:')
+    console.log(verifyResponse)
+
+    if (verifyResponse.outcome === true) {
+        localStorage.setItem('username', verifyResponse.username)
+        document.body.classList.remove('none')
+        document.body.classList.add('vis')
+        text.innerHTML = `Hi ${localStorage.getItem('username')}, your logged in.`
+        console.log(localStorage.getItem('username'))
+        console.log('user authrised')
+    } else {
+        console.log('sent to signUp page')
+        window.location.href = 'index.html'
+
+    }
+    
+}
