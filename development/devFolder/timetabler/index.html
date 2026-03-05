@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetabler</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- WELCOME SCREEN -->
+    <div id="bodyWrapper">
+        <div id="titleWrapper">Timetabler <span id="smallText">By Northern Star</span></div>
+        <h1>Welcome To Timetabler,</h1>
+        <h2>
+            Timetable allows you to enter your school's day, set your lessons and either print or download your personalised timetable.
+            Click below to start!
+        </h2>
+        <button type="button" id="Btn">Begin Timetabling</button>
+    </div>
+
+    <!-- EDIT DAY SECTION -->
+    <div id="EDIT">
+        <div class="divider"></div>
+        <h1>Set up your school day.</h1>
+        <h3>Add each part of your day by entering the start and end time of each period.</h3>
+        <div class="divider"></div>
+
+        <h1 id="periodText">|| Period 1 ||</h1>
+
+        <form id="dayForm">
+            <input type="time" id="startTimeInput" required>
+            <input type="time" id="endTimeInput" required>
+
+            <div id="BtnWrapper">
+                <button type="submit" id="submitBtn">Add Period</button>
+                <button type="button" id="continueBtn">Continue</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ADD LESSONS -->
+    <div id="ADD">
+        <div class="divider"></div>
+        <h1>Add your lessons</h1>
+
+        <div id="day-Period-Text">Monday P1:</div>
+
+        <input type="text" id="classInput" placeholder="Class Name">
+        <input type="text" id="teacherInput" placeholder="Teacher Name">
+        <input type="text" id="roomInput" placeholder="Room">
+
+        <button id="timeTableBtn" type="button">Add to TimeTable</button>
+    </div>
+
+    <!-- FINAL SCREEN -->
+    <div id="FINAL">
+        <div class="divider"></div>
+        <h1>TimeTable</h1>
+
+        <!-- Printable Header -->
+        <div id="printHeader">
+            <img src="Printable_Logo.png" id="printLogo" alt="Logo">
+        </div>
+
+        <div id="timetableOutput"></div>
+
+        <button id="printBtn">Print Timetable</button>
+        <button id="downloadBtn">Download Timetable</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+<footer>
+    <div id="footerWrapper">
+        <div id="footerLogoWrapper">
+            <a href="../../index.html">
+                <img src="Footer_logo.png" alt="Footer_logo" id="Footer_logo">
+            </a>
+        </div>
+
+        <div class="contactWrapper">
+            <div class="contactText"><span class="underlined">Contact</span> Us</div>
+            <div class="contactInfo"><b>Email: </b><a href="mailto:quintonangus@northern-star.online">quintonangus@northern-star.online</a></div>
+            <div class="contactInfo"><b>Development: </b><a href="../../index.html">www.northern-star.online/development</a></div>
+            <div class="contactInfo"><b>Web: </b><a href="../../../index.html">www.northern-star.online</a></div>
+        </div>
+
+        <div class="contactWrapper">
+            <div class="contactText"><span class="underlined">Quick</span> Links</div>
+            <a class="contactInfo quickLink" href="../../index.html">Development Portal</a>
+            <a class="contactInfo quickLink" href="../SignUp-Verification-Test-V1/index.html">SignUp Demo V1</a>
+            <a class="contactInfo quickLink" href="./index.html">Timetabler</a>
+        </div>
+    </div>
+
+    <div id="footerFoot">
+        <div id="footerFootText">Northern Star Group © 2026 - All rights reserved</div>
+    </div>
+</footer>
+
+</html>

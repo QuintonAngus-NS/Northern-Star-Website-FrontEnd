@@ -1,0 +1,326 @@
+/* --------------------------------------------- */
+/* GLOBAL STYLING */
+/* --------------------------------------------- */
+
+html, body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #141414;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------------------------------------- */
+/* HEADER / TITLE */
+/* --------------------------------------------- */
+
+#titleWrapper {
+    font-size: 45px;
+    font-weight: 700;
+    border-bottom: 1px solid #141414;
+    margin-bottom: 35px;
+    padding: 10px;
+}
+
+#smallText {
+    font-size: 15px;
+    font-weight: 350;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 15px;
+    width: 800px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #141414;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 15px;
+    width: 800px;
+    padding-bottom: 25px;
+}
+
+/* --------------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------------- */
+
+#Btn,
+#submitBtn,
+#continueBtn,
+#timeTableBtn,
+#printBtn,
+#downloadBtn {
+    font-size: 20px;
+    font-weight: 600;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#Btn,
+#submitBtn,
+#printBtn,
+#downloadBtn {
+    background-color: #141414;
+    color: white;
+    border: none;
+}
+
+#continueBtn,
+#timeTableBtn {
+    background-color: white;
+    color: #141414;
+    border: 1px solid #141414;
+}
+
+/* --------------------------------------------- */
+/* DIVIDERS */
+/* --------------------------------------------- */
+
+.divider {
+    border: 1px solid #141414;
+    width: 400px;
+}
+
+/* --------------------------------------------- */
+/* EDIT DAY SECTION */
+/* --------------------------------------------- */
+
+#EDIT {
+    margin-top: 25px;
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+#dayForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+#startTimeInput,
+#endTimeInput {
+    width: 300px;
+    margin-bottom: 25px;
+}
+
+#BtnWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+/* --------------------------------------------- */
+/* ADD LESSONS */
+/* --------------------------------------------- */
+
+#ADD {
+    margin-top: 25px;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#day-Period-Text {
+    margin-left: 15px;
+}
+
+#classInput,
+#teacherInput,
+#roomInput {
+    width: 300px;
+    margin: 10px 0;
+}
+
+/* --------------------------------------------- */
+/* FINAL SCREEN */
+/* --------------------------------------------- */
+
+#FINAL {
+    margin-top: 25px;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#timetableOutput {
+    margin-top: 20px;
+    border: 1px solid #141414;
+    padding: 15px;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+
+    /* Prevent overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* --------------------------------------------- */
+/* PRINT HEADER */
+/* --------------------------------------------- */
+
+#printHeader {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    z-index: 9999;
+}
+
+#printLogo {
+    width: 350px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------- */
+/* PRINT MODE — CLEAN, FIXED, WORKING */
+/* --------------------------------------------- */
+
+@media print {
+
+    /* Hide everything except FINAL */
+    body {
+        visibility: hidden;
+    }
+
+    #FINAL {
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        padding-top: 160px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        box-sizing: border-box;
+    }
+
+    #FINAL * {
+        visibility: visible;
+    }
+
+    /* Show print header */
+    #printHeader {
+        display: block;
+    }
+
+    /* Ensure timetable box prints fully */
+    #timetableOutput {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    /* Hide UI elements */
+    #printBtn,
+    #downloadBtn,
+    footer {
+        display: none;
+    }
+}
+
+/* --------------------------------------------- */
+/* FOOTER */
+/* --------------------------------------------- */
+
+footer {
+    background-color: #141414;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+#footerWrapper {
+    display: flex;
+}
+
+#Footer_logo {
+    width: 350px;
+}
+
+#footerLogoWrapper {
+    width: 30%;
+}
+
+#footerFoot {
+    padding-top: 15px;
+    border-top: 1px solid white;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerFootText {
+    color: white;
+    font-size: 15px;
+}
+
+.contactText {
+    font-size: 20px;
+    color: white;
+}
+
+.contactInfo {
+    font-size: 15px;
+    color: white;
+    margin: 10px 0;
+}
+
+.contactWrapper {
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid white;
+    padding-left: 15px;
+}
+
+.quickLink:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+#timetableOutput h2 {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 5px;
+}
+
+#printHeader h2 {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
